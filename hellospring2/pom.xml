@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <!-- 프로젝트 기본 정보 -->
   <groupId>com.example</groupId>
-  <artifactId>hellospring</artifactId>
+  <artifactId>hellospring2</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <!-- 배포 방식
   	war: 웹 아카이브 -->
