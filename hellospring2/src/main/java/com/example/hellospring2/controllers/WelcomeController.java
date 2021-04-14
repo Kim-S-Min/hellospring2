@@ -8,17 +8,17 @@ import org.springframework.web.servlet.ModelAndView;
 
 //	파라미터 관련 내용 정리
 @Controller
-@RequestMapping("/welcom")
+@RequestMapping("/welcome")
 public class WelcomeController {
-	@RequestMapping({"", "/"})	//	여러 url 패턴에 응답
-	//	파라미터 기본 값의 예제
+	@RequestMapping({"", "/"})	//	여러 URL 패턴에 응답
+	//	파라미터 기본 값 예제
 	//	기본 방식으로 RequestParam을 사용하면 반드시 파라미터가 전달되어야 한다
 //	public ModelAndView home(@RequestParam String name) {
 	public ModelAndView home(
 			@RequestParam(value="name",
 						required=false,
 						defaultValue="there") String name) {
-		//	required = false, defaultValue를 부여해서 파라미터 기본 값을 부여한다
+		//	required=false, defaultValue 를 부여해서 파라미터 기본 값을 부여
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("message", "Hello, " + name);
 		mav.setViewName("/WEB-INF/views/hello.jsp");
